@@ -9,24 +9,11 @@ const options = [
 ]
 
 const customStyles = {
-  option: (provided, state) => ({
-    ...provided,
-    borderBottom: '1px dotted pink',
-    color: state.isSelected ? 'red' : 'blue',
-    padding: 20,
-  }),
-  control: () => ({
-    // none of react-select's styles are passed to <Control />
-    width: 200,
-  }),
-  singleValue: (provided, state) => {
-    const opacity = state.isDisabled ? 0.5 : 1;
-    const transition = 'opacity 300ms';
-
-    return { ...provided, opacity, transition };
-  }
+  input:()=>({
+    height: '50px',
+    maxWidth: '20px',
+  })
 }
-
 
 export default class FlavorForm extends React.Component {
   constructor(props) {
@@ -45,16 +32,17 @@ export default class FlavorForm extends React.Component {
     alert('Your favorite flavor is: ' + this.state.value);
     event.preventDefault();
   }
-
   render() {
     return (
+      <div className="container text-center">
       <form onSubmit={this.handleSubmit}>
         <label>
           Completa los datos para obtener el precio del vehículo
-          <Select components={makeAnimated()} options={options} styles={customStyles} />
+          <Select placeholder="Selecciona la marca" components={makeAnimated()} options={options} styles={customStyles} />
         </label>
         <button type="submit" className="btn-primary" value="Submit">Ver precio</button>
       </form>
+      </div>
     );
   }
 }
