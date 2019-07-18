@@ -7049,8 +7049,13 @@ select {
   transform: translateZ(0);
   opacity: 1; }
 
+.form-container {
+  background-color: #222; }
+
 body {
-  font-family: 'Montserrat', sans-serif !important; }
+  font-family: 'Montserrat', sans-serif !important;
+  font-size: 14px;
+  background-color: #222; }
 
 
 /*# sourceMappingURL=styles.chunk.css.map*/
