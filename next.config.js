@@ -1,5 +1,5 @@
 const withSass = require('@zeit/next-sass')
-const isProd = (process.env.NODE_ENV || 'production') === 'production'
+const isProd = process.env.NODE_ENV !== 'production'
 
 module.exports =withSass({
   exportPathMap: function () {
@@ -7,7 +7,7 @@ module.exports =withSass({
       '/': { page: '/' },
     }
   },
-  assetPrefix: !isProd ? '/iframeInfoAuto/' : '',
+  // assetPrefix: '/iframeInfoAuto', //para el deploy
   webpack: (config) => {
     // Fixes npm packages that depend on `fs` module
     config.node = {
