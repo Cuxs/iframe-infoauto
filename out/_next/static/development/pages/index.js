@@ -1,5 +1,118 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([["static/development/pages/index.js"],{
 
+/***/ "./components/carDetail.js":
+/*!*********************************!*\
+  !*** ./components/carDetail.js ***!
+  \*********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_corejs2_core_js_object_keys__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/core-js/object/keys */ "./node_modules/@babel/runtime-corejs2/core-js/object/keys.js");
+/* harmony import */ var _babel_runtime_corejs2_core_js_object_keys__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_core_js_object_keys__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+
+var _jsxFileName = "/Users/mariano/Trabajo/MAH/iframeInfoAuto/components/carDetail.js";
+
+/* harmony default export */ __webpack_exports__["default"] = (function (_ref) {
+  var data = _ref.data;
+  if (!data) return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 2
+    },
+    __self: this
+  });
+  return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
+    className: "col-12",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 3
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h2", {
+    className: "text-white",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 4
+    },
+    __self: this
+  }, "Detalles del veh\xEDculo"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "d-flex justify-content-around",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 5
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("table", {
+    className: "table table-dark",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 6
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("thead", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 7
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("tr", {
+    className: "thead-light",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 8
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("th", {
+    scope: "col",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 9
+    },
+    __self: this
+  }, "Propiedad"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("th", {
+    scope: "col",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 10
+    },
+    __self: this
+  }, "Atributo"))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("tbody", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 13
+    },
+    __self: this
+  }, _babel_runtime_corejs2_core_js_object_keys__WEBPACK_IMPORTED_MODULE_0___default()(data.Details).map(function (row) {
+    return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("tr", {
+      key: row,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 14
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("th", {
+      className: "text-white",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 14
+      },
+      __self: this
+    }, row), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("th", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 14
+      },
+      __self: this
+    }, data.Details[row]));
+  })))));
+});
+
+/***/ }),
+
 /***/ "./helpers/index.js":
 /*!**************************!*\
   !*** ./helpers/index.js ***!
@@ -50734,6 +50847,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var apollo_boost__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! apollo-boost */ "./node_modules/apollo-boost/lib/bundle.esm.js");
 /* harmony import */ var _queries_tauto_queries__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../queries/tauto.queries */ "./queries/tauto.queries.js");
 /* harmony import */ var _helpers__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ../helpers */ "./helpers/index.js");
+/* harmony import */ var _components_carDetail__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ../components/carDetail */ "./components/carDetail.js");
 
 
 
@@ -50743,6 +50857,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var _jsxFileName = "/Users/mariano/Trabajo/MAH/iframeInfoAuto/pages/index.js";
+
 
 
 
@@ -50838,21 +50953,21 @@ function (_React$Component) {
         client: this.client,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 63
+          lineNumber: 64
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", {
         className: "container text-center form-container",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 64
+          lineNumber: 65
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(react_apollo__WEBPACK_IMPORTED_MODULE_12__["Query"], {
         query: _queries_tauto_queries__WEBPACK_IMPORTED_MODULE_14__["AllBrandsQuery"],
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 65
+          lineNumber: 66
         },
         __self: this
       }, function (_ref) {
@@ -50862,7 +50977,7 @@ function (_React$Component) {
         if (error) return react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 69
+            lineNumber: 70
           },
           __self: this
         }, "Error :(");
@@ -50870,21 +50985,21 @@ function (_React$Component) {
           onSubmit: _this2.handleSubmit,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 71
+            lineNumber: 72
           },
           __self: this
         }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("label", {
           className: "mb-4 text-white",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 72
+            lineNumber: 73
           },
           __self: this
         }, "Completa los datos para obtener el precio del veh\xEDculo."), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", {
           className: "d-flex justify-content-center",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 75
+            lineNumber: 76
           },
           __self: this
         }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(react_select__WEBPACK_IMPORTED_MODULE_11__["default"], {
@@ -50900,7 +51015,7 @@ function (_React$Component) {
           styles: customStyles,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 76
+            lineNumber: 77
           },
           __self: this
         })), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(react_apollo__WEBPACK_IMPORTED_MODULE_12__["Query"], {
@@ -50911,7 +51026,7 @@ function (_React$Component) {
           },
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 84
+            lineNumber: 85
           },
           __self: this
         }, function (_ref3) {
@@ -50921,7 +51036,7 @@ function (_React$Component) {
           if (error) return react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", {
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 86
+              lineNumber: 87
             },
             __self: this
           }, "Error :(");
@@ -50929,7 +51044,7 @@ function (_React$Component) {
             className: "d-flex justify-content-center mt-4",
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 87
+              lineNumber: 88
             },
             __self: this
           }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(react_select__WEBPACK_IMPORTED_MODULE_11__["default"], {
@@ -50945,7 +51060,7 @@ function (_React$Component) {
             styles: customStyles,
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 88
+              lineNumber: 89
             },
             __self: this
           }));
@@ -50958,7 +51073,7 @@ function (_React$Component) {
           },
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 98
+            lineNumber: 99
           },
           __self: this
         }, function (_ref5) {
@@ -50968,7 +51083,7 @@ function (_React$Component) {
           if (error) return react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", {
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 100
+              lineNumber: 101
             },
             __self: this
           }, "Error :(");
@@ -50976,7 +51091,7 @@ function (_React$Component) {
             className: "d-flex justify-content-center mt-4",
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 101
+              lineNumber: 102
             },
             __self: this
           }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(react_select__WEBPACK_IMPORTED_MODULE_11__["default"], {
@@ -50992,7 +51107,7 @@ function (_React$Component) {
             styles: customStyles,
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 102
+              lineNumber: 103
             },
             __self: this
           }));
@@ -51004,14 +51119,13 @@ function (_React$Component) {
           },
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 112
+            lineNumber: 113
           },
           __self: this
         }, function (_ref7) {
           var loading = _ref7.loading,
               error = _ref7.error,
               data = _ref7.data;
-          console.log(data);
           if (error) return react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", {
             __source: {
               fileName: _jsxFileName,
@@ -51050,7 +51164,57 @@ function (_React$Component) {
             lineNumber: 127
           },
           __self: this
-        }, "Precio sugerido: $".concat(Object(_helpers__WEBPACK_IMPORTED_MODULE_15__["thousands"])(_this2.state.price))));
+        }, "Precio sugerido: $".concat(Object(_helpers__WEBPACK_IMPORTED_MODULE_15__["thousands"])(_this2.state.price))), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("hr", {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 128
+          },
+          __self: this
+        }), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(react_apollo__WEBPACK_IMPORTED_MODULE_12__["Query"], {
+          query: _queries_tauto_queries__WEBPACK_IMPORTED_MODULE_14__["DetailsQuery"],
+          skip: !_this2.state.model,
+          variables: {
+            ta3_codia: _this2.state.model
+          },
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 129
+          },
+          __self: this
+        }, function (_ref9) {
+          var loading = _ref9.loading,
+              error = _ref9.error,
+              data = _ref9.data;
+          if (error) return react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", {
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 131
+            },
+            __self: this
+          }, "Error :(");
+          if (loading) return react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", {
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 132
+            },
+            __self: this
+          });
+          return react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", {
+            className: "d-flex mt-4",
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 133
+            },
+            __self: this
+          }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(_components_carDetail__WEBPACK_IMPORTED_MODULE_16__["default"], {
+            data: data,
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 134
+            },
+            __self: this
+          }));
+        }));
       })));
     }
   }]);
@@ -51066,7 +51230,7 @@ function (_React$Component) {
 /*!**********************************!*\
   !*** ./queries/tauto.queries.js ***!
   \**********************************/
-/*! exports provided: AllBrandsQuery, GroupsQuery, ModelsQuery, YearsQuery, InfoCarQuery */
+/*! exports provided: AllBrandsQuery, GroupsQuery, ModelsQuery, YearsQuery, DetailsQuery */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -51075,13 +51239,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GroupsQuery", function() { return GroupsQuery; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ModelsQuery", function() { return ModelsQuery; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "YearsQuery", function() { return YearsQuery; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "InfoCarQuery", function() { return InfoCarQuery; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DetailsQuery", function() { return DetailsQuery; });
 /* harmony import */ var _babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral */ "./node_modules/@babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral.js");
 /* harmony import */ var apollo_boost__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! apollo-boost */ "./node_modules/apollo-boost/lib/bundle.esm.js");
 
 
 function _templateObject5() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["query Caracteristics($ext_codia: Int!) {\n  Caracteristics(ext_codia: $ext_codia) {\n    Combustible\n    Alimentacion\n    Motor\n    Puertas\n    Clasificacion\n    Cabina\n    Carga\n    PesoTotal\n    VelocidadMax\n    Potencia\n    Direccion\n    AireAcondicionado\n    Traccion\n    Importado\n    Caja\n    FrenosAbs\n    Airbag\n  }\n  TecnicalData(ex2_codia: $ext_codia) {\n    Climatizador\n    FarosAntiniebla\n    TechoCorredizo\n    SensorEstacionamiento\n    AirbagLateral\n    AirbagCabezaConductor\n    AirbagCortina\n    AirbagRodilla\n    FijacionISOFIX\n    ControlDeTraccion\n    ControlDeEstabilidad\n    ControlDeDescenso\n    SistemaArranqueEnPendiente\n    ControlDinamicoConduccion\n    BloqueoDiferencial\n    RepartidorElectronicoDeFrenado\n    AsistenteDeFrenadoDeEmergencia\n    ReguladorParFrenado\n    Largo\n    Ancho\n    Alto\n  }\n  Additionals(ex3_codia: $ext_codia) {\n    TapizadoCuero\n    AsientosElectronicos\n    ComputadoraABordo\n    FarosDeXenon\n    LlantasDeAleacion\n    TechoPanoramico\n    SensorDeLluvia\n    SensorCrepuscular\n    IndicadorPresionNeumaticos\n    VolanteConLevas\n    Bluetooth\n    AsientosTermicos\n    RunFlat\n  }\n}\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["query Caracteristics($ta3_codia: Int!) {\n  Details(ta3_codia: $ta3_codia) {\n    Potencia\n    Combustible\n    VelMax\n    Alimentacion\n    Cilindrada\n    Computadora\n    FarosAntiniebla\n    Cuero\n    CajaAutomatica\n    AsientosElectricos\n    Bluetooth\n    SensorEstacion\n    CalefaccionAsientos\n    LLantasDeAleacion\n    AireAcondicionado\n    OpticasXenon\n    LevasAlBolante\n    CamaraEstacionamiento\n    TechoSolarPanoramico\n    TechoCorredizo\n    SensorDeLluvia\n    ControlDeEstabilidad\n    AirbagCortina\n    ControlTraccion\n    ReguladorParFrenado\n    AsistenteFrenadoEmergencia\n    Airbag\n    SensorCrepuscular\n    ABS\n    AribagLateral\n    Isofix\n    AirbagRodilla\n    RepartidorDeFrenado\n    AirbagDeCabeza\n    MonitoreoPresionCubiertas\n    AyudaArranqueEnPendiente\n    ControlDeDescenso\n    BloqueoDiferencal\n    ControlDinamicoDeConduccion\n    DireccionAsistida\n    TipoDeVehiculo\n    Ancho\n    Peso\n    Largo\n    CantidadDePuertas\n    Altura\n    PermiteCarga\n    Importado \n  }\n}\n"]);
 
   _templateObject5 = function _templateObject5() {
     return data;
@@ -51135,7 +51299,7 @@ var AllBrandsQuery = Object(apollo_boost__WEBPACK_IMPORTED_MODULE_1__["gql"])(_t
 var GroupsQuery = Object(apollo_boost__WEBPACK_IMPORTED_MODULE_1__["gql"])(_templateObject2());
 var ModelsQuery = Object(apollo_boost__WEBPACK_IMPORTED_MODULE_1__["gql"])(_templateObject3());
 var YearsQuery = Object(apollo_boost__WEBPACK_IMPORTED_MODULE_1__["gql"])(_templateObject4());
-var InfoCarQuery = Object(apollo_boost__WEBPACK_IMPORTED_MODULE_1__["gql"])(_templateObject5());
+var DetailsQuery = Object(apollo_boost__WEBPACK_IMPORTED_MODULE_1__["gql"])(_templateObject5());
 
 
 /***/ }),
