@@ -4,10 +4,11 @@ import Select from 'react-select'
 import { Query } from "react-apollo";
 import ApolloClient from "apollo-boost";
 import { ApolloProvider } from "react-apollo";
-import { AllBrandsQuery, GroupsQuery, ModelsQuery, YearsQuery } from '../queries/tauto.queries';
+import { AllBrandsQuery, GroupsQuery, ModelsQuery, YearsQuery, DetailsQuery } from '../queries/tauto.queries';
 import { prepareArraySelect, thousands } from '../helpers';
+import CarDetail from '../components/carDetail';
 
-const customTheme=(theme)=>({
+const customTheme = (theme) => ({
   ...theme,
   colors: {
     ...theme.colors,
@@ -33,16 +34,16 @@ const customStyles = {
     borderRadius: '0px',
     maxWidth: '250px',
   }),
-  menu: (base)=>({
+  menu: (base) => ({
     ...base,
-    borderRadius:'0px',
+    borderRadius: '0px',
   })
 }
 
 export default class PricesForm extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { brand: '', group: '', model:'', year: '', price: '' };
+    this.state = { brand: '', group: '', model: '', year: '', price: '' };
 
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -111,7 +112,6 @@ export default class PricesForm extends React.Component {
                 </Query>
                 <Query query={YearsQuery} skip={!this.state.model} variables={{ ta3_codia: this.state.model }}>
                   {({ loading, error, data }) => {
-                    console.log(data);
                     if (error) return <p>Error :(</p>;
                     return <div className="d-flex justify-content-center mt-4">
                       <Select
@@ -124,7 +124,17 @@ export default class PricesForm extends React.Component {
                     </div>
                   }}
                 </Query>
-                  {this.state.price!== '' &&<h2 className="text-white mt-5">{`Precio sugerido: $${thousands(this.state.price)}`}</h2>}
+                {this.state.price !== '' && <h2 className="text-white mt-5">{`Precio sugerido: $${thousands(this.state.price)}`}</h2>}
+                <hr/>
+                <Query query={DetailsQuery} skip={!this.state.model} variables={{ ta3_codia: this.state.model }}>
+                  {({ loading, error, data }) => {
+                    if (error) return <p>Error :(</p>;
+                    if (loading) return <div />
+                    return <div className="d-flex mt-4">
+                      <CarDetail data={data} />
+                    </div>
+                  }}
+                </Query>
               </form>
             }}
           </Query>

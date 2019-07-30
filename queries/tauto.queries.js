@@ -33,66 +33,59 @@ const YearsQuery = gql`query Price ($ta3_codia: Int!) {
 }
 `;
 
-const InfoCarQuery = gql`query Caracteristics($ext_codia: Int!) {
-  Caracteristics(ext_codia: $ext_codia) {
-    Combustible
-    Alimentacion
-    Motor
-    Puertas
-    Clasificacion
-    Cabina
-    Carga
-    PesoTotal
-    VelocidadMax
+const DetailsQuery = gql`query Caracteristics($ta3_codia: Int!) {
+  Details(ta3_codia: $ta3_codia) {
     Potencia
-    Direccion
-    AireAcondicionado
-    Traccion
-    Importado
-    Caja
-    FrenosAbs
-    Airbag
-  }
-  TecnicalData(ex2_codia: $ext_codia) {
-    Climatizador
+    Combustible
+    VelMax
+    Alimentacion
+    Cilindrada
+    Computadora
     FarosAntiniebla
-    TechoCorredizo
-    SensorEstacionamiento
-    AirbagLateral
-    AirbagCabezaConductor
-    AirbagCortina
-    AirbagRodilla
-    FijacionISOFIX
-    ControlDeTraccion
-    ControlDeEstabilidad
-    ControlDeDescenso
-    SistemaArranqueEnPendiente
-    ControlDinamicoConduccion
-    BloqueoDiferencial
-    RepartidorElectronicoDeFrenado
-    AsistenteDeFrenadoDeEmergencia
-    ReguladorParFrenado
-    Largo
-    Ancho
-    Alto
-  }
-  Additionals(ex3_codia: $ext_codia) {
-    TapizadoCuero
-    AsientosElectronicos
-    ComputadoraABordo
-    FarosDeXenon
-    LlantasDeAleacion
-    TechoPanoramico
-    SensorDeLluvia
-    SensorCrepuscular
-    IndicadorPresionNeumaticos
-    VolanteConLevas
+    Cuero
+    CajaAutomatica
+    AsientosElectricos
     Bluetooth
-    AsientosTermicos
-    RunFlat
+    SensorEstacion
+    CalefaccionAsientos
+    LLantasDeAleacion
+    AireAcondicionado
+    OpticasXenon
+    LevasAlBolante
+    CamaraEstacionamiento
+    TechoSolarPanoramico
+    TechoCorredizo
+    SensorDeLluvia
+    ControlDeEstabilidad
+    AirbagCortina
+    ControlTraccion
+    ReguladorParFrenado
+    AsistenteFrenadoEmergencia
+    Airbag
+    SensorCrepuscular
+    ABS
+    AribagLateral
+    Isofix
+    AirbagRodilla
+    RepartidorDeFrenado
+    AirbagDeCabeza
+    MonitoreoPresionCubiertas
+    AyudaArranqueEnPendiente
+    ControlDeDescenso
+    BloqueoDiferencal
+    ControlDinamicoDeConduccion
+    DireccionAsistida
+    TipoDeVehiculo
+    Ancho
+    Peso
+    Largo
+    CantidadDePuertas
+    Altura
+    PermiteCarga
+    Importado 
   }
 }
 `;
 
 
-export { AllBrandsQuery, GroupsQuery, ModelsQuery, YearsQuery, InfoCarQuery };
+export { AllBrandsQuery, GroupsQuery, ModelsQuery, YearsQuery, DetailsQuery };
